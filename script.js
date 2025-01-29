@@ -22,3 +22,6 @@ window.addEventListener("load", () => {
       
     });
   });
+  function lol() {
+    window.location.href = "https://www.youtube.com/watch?v=EQvuyx3MYhI"; // Change to any URL
+  }
