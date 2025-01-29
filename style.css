@@ -1,0 +1,250 @@
+/* Fullscreen loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #C8A2C8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .heart {
+    --c: rgb(255, 255, 255);
+    width: 200px;
+    aspect-ratio: 1;
+    background:
+     radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
+     radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
+     conic-gradient(from -45deg at 50% 84%,var(--c) 90deg,#0000 0) 
+      bottom/100% 50% no-repeat;
+      
+  }
+
+  body{
+    background-color: #C8A2C8;
+    opacity: 1;
+    background-image:  radial-gradient(#ffffff 2px, transparent 2px), radial-gradient(#ffffff 2px, #C8A2C8 2px);
+    background-size: 80px 80px;
+    background-position: 0 0,40px 40px;
+  }
+
+  .content {
+    font-size: 400%;
+    font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    font-weight: 200;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border-radius: 15px;
+  
+}
+
+#container > div{
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+  font-size: 35px;
+  background-color: #f1f1f1;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  border-radius: 15px;
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  text-align: center;
+  
+ 
+}
+.text-container {
+  
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  margin: 1px;
+  justify-content: top; /* Center vertically within the text container */
+  align-items: center; /* Center horizontally within the text container */
+  background-color: #f1f1f1;
+  padding: 3px;
+  
+}
+#button-row{
+  display: flex;
+  flex-direction: row; 
+  justify-content: top; /* Center vertically within the text container */
+  align-items: center; /* Center horizontally within the text container */
+  
+}
+.yes {
+  
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+  text-align: center;
+  background-color: #C8A2C8;
+  border-radius: 35px;
+  border-color: #0000;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 5px 20px;
+  cursor: pointer;
+  
+}
+#no {
+  
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+  background-color: #C8A2C8;
+  border-radius: 35px;
+  border-color: #0000;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 5px 20px;
+  cursor: pointer;
+  
+}
+.flower{
+  width: 140px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  
+  
+}
+
+.flower::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  transform: rotate(60deg);
+  
+}
+.flower::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  transform: rotate(-60deg);
+}
+
+#container > .flower{
+  width: 140px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+.book {
+  position: fixed; /* Keeps the image in a fixed position relative to the viewport */
+  top: 90px; /* Adjust the vertical position (e.g., 20px from the top) */
+  left: 10px; /* Adjust the horizontal position (e.g., 20px from the left) */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.book img {
+  width: 120px; /* Set the width of the image */
+  height: auto; /* Maintain the image aspect ratio */
+  transform: rotate(10deg);
+}
+.book2 {
+  position: fixed; /* Keeps the image in a fixed position relative to the viewport */
+  top: 90px; /* Adjust the vertical position (e.g., 20px from the top) */
+  right: 10px; /* Adjust the horizontal position (e.g., 20px from the left) */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.book2 img {
+  width: 120px; /* Set the width of the image */
+  height: auto; /* Maintain the image aspect ratio */
+  transform: rotate(-10deg);
+}
+
+.spotify{
+  display: grid;
+  place-items: center;
+  min-height: 50px;
+  min-width: auto;
+}
+
+.image {
+  display: none; /* Start hidden completely */
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  transition: opacity 0.5s linear;
+  opacity: 0; 
+}
+
+.image img {
+  width: 100px;
+  height: 100px;
+  
+}
+
+#bottom {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Align items in a row */
+  align-items: center; /* Center them vertically */
+  place-content: center;
+ 
+}
+
+.polaroid {
+  display: flex; /* Ensures images are inside a Flexbox */
+  justify-content: center; /* Center content */
+  align-items: left;
+  margin:auto;
+}
+.squish {
+  display: flex; /* Ensures images are inside a Flexbox */
+  justify-content: center; /* Center content */
+  align-items: center;
+  margin:auto;
+}
+
+.polaroid img {
+  width: 200px;
+  height: auto;
+  transform: rotate(-10deg);
+}
+
+.squish img {
+  width: 200px;
+  height: auto;
+  transform: rotate(10deg);
+}
+
